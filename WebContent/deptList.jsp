@@ -6,11 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>부서 목록</title>
+<link rel="stylesheet" href="css/dept_style.css">
 </head>
 <body>
+	<div class="list">
 	<h2>부서 목록</h2> <pre>  </pre>
 	<a href="index.jsp"><button>홈 이동</button></a>
-	<table border="1">
+	<table>
 		<thead>
 			<td>부서번호</td>
 			<td>부서명</td>
@@ -27,9 +29,10 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="3"><a href="DeptInputServlet">부서 추가</a></td>
+				<td colspan="3"><a href="DeptInputServlet"><button>부서 추가</button></a></td>
 			</tr>
 		</tfoot>
 	</table>
+	</div>
 </body>
 </html>

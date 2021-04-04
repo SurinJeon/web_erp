@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html{
+	background-color: #feffde;
+}
+
 .menu{
 	width: 400px;
 	margin: 20px auto;

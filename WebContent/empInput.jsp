@@ -21,6 +21,7 @@
 <head>
 <meta charset="UTF-8">
 <title>사원 추가</title>
+<link rel="stylesheet" href="css/emp_style.css">
 </head>
 <body>
 	<c:set var="eList" value="<%=eList%>" />

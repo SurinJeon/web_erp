@@ -6,11 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>사원 목록</title>
+<link rel="stylesheet" href="css/emp_style.css">
 </head>
 <body>
+	<div class="list">
 	<h2>사원 목록</h2> <pre>  </pre>
 	<a href="index.jsp"><button>홈 이동</button></a>
-	<table border="1">
+	<table>
 		<thead>
 			<td>사원번호</td>
 			<td>사원명</td>
@@ -34,10 +36,10 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="6"><a href="EmpInputServlet">사원 추가</a></td>
+				<td colspan="6"><a href="EmpInputServlet"><button>사원 추가</button></a></td>
 			</tr>
 		</tfoot>
 	</table>
-
+	</div>
 </body>
 </html>

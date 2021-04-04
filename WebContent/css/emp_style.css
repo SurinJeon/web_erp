@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.list{
+	margin: 20px auto;
+	text-align: center;
+}
+
+.list table{
+	margin: 20px auto;
+	border: 1px solid black;
+}
+
+.list table thead td{
+	padding: 10px;
+	width: 100px;
+	align-content: center;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: #3b5360;
+}
+
+.list h2{
+	display: inline;
+}
+
+.list pre{
+	display: inline;
+}
+
+
+.input{
+	width: 300px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+.info{
+	width: 300px;
+	margin: 20px auto;
+	text-align: center;
+}

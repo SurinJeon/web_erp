@@ -22,6 +22,8 @@ public class DeptInputServlet extends HttpServlet {
 		
 		RequestDispatcher dispather1 = request.getRequestDispatcher("index.jsp");
 		dispather1.include(request, response);
+		RequestDispatcher dispather2 = request.getRequestDispatcher("DeptListServlet");
+		dispather2.include(request, response);
 		request.getRequestDispatcher("deptInput.jsp").include(request, response);
 	}
 
