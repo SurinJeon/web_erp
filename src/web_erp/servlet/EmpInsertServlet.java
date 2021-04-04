@@ -46,7 +46,7 @@ public class EmpInsertServlet extends HttpServlet {
 		Employee emp = new Employee(no, name, title, manager, salary, dept);
 		service.addEmps(emp);
 		
-		response.sendRedirect("EmpListServlet");
+		request.getRequestDispatcher("EmpIndexServlet").include(request, response);
 		
 	}
 

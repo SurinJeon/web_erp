@@ -22,12 +22,12 @@ public class EmpdeleteServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("text/html; charset = utf-8");
+		response.setContentType("text/html; charset = utf-8");
 		
 		int no = Integer.parseInt(request.getParameter("eNo"));
 		service.deleteEmps(new Employee(no));
 		
-		response.sendRedirect("EmpListServlet");
+		request.getRequestDispatcher("EmpIndexServlet").include(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

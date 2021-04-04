@@ -30,7 +30,7 @@ public class TitleUpdateServlet extends HttpServlet {
 		service.modifyTitles(new Title(no, name));
 		
 //		response.sendRedirect("TitleListServlet");
-		request.getRequestDispatcher("TitleListServlet").forward(request, response);
+		request.getRequestDispatcher("TitleIndexServlet").forward(request, response);
 		
 	}
 

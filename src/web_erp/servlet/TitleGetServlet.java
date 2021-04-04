@@ -2,6 +2,7 @@ package web_erp.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,14 +23,18 @@ public class TitleGetServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset = utf-8");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		int no = Integer.parseInt(request.getParameter("titleNo").trim());
 		Title title = service.showTitleByNo(new Title(no));
 		
 		request.setAttribute("title", title);
 //		response.sendRedirect("titleInfo.jsp");
-		request.getRequestDispatcher("titleInfo.jsp").forward(request, response);
+		
+		RequestDispatcher dispather1 = request.getRequestDispatcher("index.jsp");
+		dispather1.include(request, response);
+		RequestDispatcher dispather2 = request.getRequestDispatcher("TitleListServlet");
+		dispather2.include(request, response);
+		request.getRequestDispatcher("titleInfo.jsp").include(request, response);
 		
 		
 	}

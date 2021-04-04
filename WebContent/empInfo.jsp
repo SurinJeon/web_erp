@@ -7,13 +7,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	Employee emp = (Employee)request.getAttribute("emp");
-	TitleService service = new TitleService();
-	List<Title> list = service.showTitles();
-	DeptService service2 = new DeptService();
-	List<Department> list2 = service2.showDepts();
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +15,9 @@
 <title>사원 목록 정보</title>
 </head>
 <body>
-<c:set var="list" value="<%=list %>"/>
-<c:set var="list2" value="<%=list2 %>"/>
+<c:set var="emp" value='<%=request.getAttribute("emp") %>'/>
+<c:set var="tList" value='<%=request.getAttribute("tList") %>'/>
+<c:set var="dList" value='<%=request.getAttribute("dList") %>'/>
 	<form action="EmpUpdateServlet?eNo=${emp.no }">
 		<table>
 
@@ -38,13 +33,13 @@
 			<tr>
 				<td><label for="title">직책명: </label></td>
 				<td><select size="1" id="title" name="title">
-						<c:forEach var="i" begin="0" end="${list.size() - 1}">
+						<c:forEach var="i" begin="0" end="${tList.size() - 1}">
 							<c:choose>
-								<c:when test="${emp.title.name eq list.get(i).name }">
-									<option value=${list.get(i).name } selected="selected">${list.get(i).name }</option>
+								<c:when test="${emp.title.name eq tList.get(i).name }">
+									<option value=${tList.get(i).name } selected="selected">${tList.get(i).name }</option>
 								</c:when>
 								<c:otherwise>
-									<option value=${list.get(i).name }>${list.get(i).name }</option>
+									<option value=${tList.get(i).name }>${tList.get(i).name }</option>
 								</c:otherwise>
 							</c:choose>
 						</c:forEach>
@@ -64,13 +59,13 @@
 			<tr>
 				<td><label for="dept">부서명: </label></td>
 				<td><select size="1" id="dept" name="dept">
-						<c:forEach var="i" begin="0" end="${list2.size() - 1}">
+						<c:forEach var="i" begin="0" end="${dList.size() - 1}">
 							<c:choose>
-								<c:when test="${emp.dept.name eq list2.get(i).name }">
-									<option value=${list2.get(i).name } selected="selected">${list2.get(i).name }</option>
+								<c:when test="${emp.dept.name eq dList.get(i).name }">
+									<option value=${dList.get(i).name } selected="selected">${dList.get(i).name }</option>
 								</c:when>
 								<c:otherwise>
-									<option value=${list2.get(i).name }>${list2.get(i).name }</option>
+									<option value=${dList.get(i).name }>${dList.get(i).name }</option>
 								</c:otherwise>
 							</c:choose>
 						</c:forEach>
@@ -80,12 +75,8 @@
 
 		<br>
 		<button>사원 수정</button>
+		<button><a href="EmpdeleteServlet?eNo=${emp.no }">사원 삭제</a></button>
+		
 	</form>
-
-
-	<a href="EmpdeleteServlet?eNo=${emp.no }">
-		<button>사원 삭제</button>
-	</a>
-
 </body>
 </html>

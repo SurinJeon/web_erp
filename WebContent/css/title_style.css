@@ -25,6 +25,15 @@ a:hover{
 	color: #3b5360;
 }
 
+.list h2{
+	display: inline;
+}
+
+.list pre{
+	display: inline;
+}
+
+
 /* titleInput */
 .input{
 	width: 300px;

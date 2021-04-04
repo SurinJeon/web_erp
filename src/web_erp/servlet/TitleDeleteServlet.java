@@ -26,7 +26,7 @@ public class TitleDeleteServlet extends HttpServlet {
 		int no = Integer.parseInt(request.getParameter("tNo"));
 		service.deleteTitles(new Title(no));
 		
-		response.sendRedirect("TitleListServlet");
+		response.sendRedirect("TitleIndexServlet");
 		
 	}
 

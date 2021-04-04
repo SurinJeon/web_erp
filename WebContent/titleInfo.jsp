@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/title_style.css">
 </head>
 <body>
+
 	<form action="TitleUpdateServlet?titleNo=${title.no }">
 		<div class="info">
 			<h2>직책 정보</h2>

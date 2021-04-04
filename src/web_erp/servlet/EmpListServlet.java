@@ -26,7 +26,7 @@ public class EmpListServlet extends HttpServlet {
 		List<Employee> list = service.showEmps();
 		
 		request.setAttribute("list", list);
-		request.getRequestDispatcher("empList.jsp").forward(request, response);
+		request.getRequestDispatcher("empList.jsp").include(request, response);
 		
 	}
 

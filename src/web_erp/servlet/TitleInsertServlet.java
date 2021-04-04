@@ -25,14 +25,13 @@ public class TitleInsertServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset = utf-8");
 		
-		// tno=9&tname="인턴"
 		int no = Integer.parseInt(request.getParameter("tNo").trim());
 		String name = request.getParameter("tName").trim();
 		
 		Title title = new Title(no, name);
 		
 		service.addTitles(title);
-		response.sendRedirect("TitleListServlet");
+		response.sendRedirect("TitleIndexServlet");
 //		request.getRequestDispatcher("TitleListServlet").forward(request, response); << list를 보여주는데 url은 insert가 떠서 그냥 redirect하는게 깔끔
 		
 	}

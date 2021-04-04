@@ -1,6 +1,8 @@
 package web_erp.servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,7 @@ public class DeptdeleteServlet extends HttpServlet {
 		int no = Integer.parseInt(request.getParameter("dNo"));
 		service.deleteDepts(new Department(no));
 		
-		response.sendRedirect("DeptListServlet");
+		request.getRequestDispatcher("DeptIndexServlet").include(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

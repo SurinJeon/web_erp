@@ -2,6 +2,7 @@ package web_erp.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +32,8 @@ public class DeptInsertServlet extends HttpServlet {
 		
 		Department dept = new Department(no, name, floor);
 		service.addDepts(dept);
-		response.sendRedirect("DeptListServlet");
+		
+		request.getRequestDispatcher("DeptIndexServlet").include(request, response);
 		
 	}
 

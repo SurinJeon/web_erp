@@ -8,7 +8,8 @@
 <title>부서 목록</title>
 </head>
 <body>
-	<h2>부서 목록</h2>
+	<h2>부서 목록</h2> <pre>  </pre>
+	<a href="index.jsp"><button>홈 이동</button></a>
 	<table border="1">
 		<thead>
 			<td>부서번호</td>
@@ -26,7 +27,7 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="3"><a href="deptInput.jsp">부서 추가</a></td>
+				<td colspan="3"><a href="DeptInputServlet">부서 추가</a></td>
 			</tr>
 		</tfoot>
 	</table>

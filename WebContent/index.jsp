@@ -14,9 +14,9 @@
 <body>
 	<div class="menu">
 		<ul>
-			<li><a href="TitleListServlet">직책 관리</a></li>
-			<li><a href="DeptListServlet">부서 관리 </a></li>
-			<li><a href="EmpListServlet">사원 관리 </a></li>
+			<li><a href="TitleIndexServlet">직책 관리</a></li>
+			<li><a href="DeptIndexServlet">부서 관리 </a></li>
+			<li><a href="EmpIndexServlet">사원 관리 </a></li>
 		</ul>
 	</div>
 </body>

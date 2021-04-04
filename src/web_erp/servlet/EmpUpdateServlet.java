@@ -46,8 +46,7 @@ public class EmpUpdateServlet extends HttpServlet {
 		
 		
 		service.modifyEmps(emp);
-		request.getRequestDispatcher("EmpListServlet").forward(request, response);
-		
+		request.getRequestDispatcher("EmpIndexServlet").include(request, response);		
 		
 	}
 

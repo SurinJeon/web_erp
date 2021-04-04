@@ -1,6 +1,8 @@
 package web_erp.servlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +29,12 @@ public class DeptGetServlet extends HttpServlet {
 		Department dept = service.showDeptByNo(new Department(no));
 		
 		request.setAttribute("dept", dept);
-		request.getRequestDispatcher("deptInfo.jsp").forward(request, response);
+		
+		RequestDispatcher dispather1 = request.getRequestDispatcher("index.jsp");
+		dispather1.include(request, response);
+		RequestDispatcher dispather2 = request.getRequestDispatcher("DeptListServlet");
+		dispather2.include(request, response);
+		request.getRequestDispatcher("deptInfo.jsp").include(request, response);
 		
 	}
 

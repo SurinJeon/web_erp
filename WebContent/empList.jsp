@@ -8,7 +8,8 @@
 <title>사원 목록</title>
 </head>
 <body>
-	<h2>사원 목록</h2>
+	<h2>사원 목록</h2> <pre>  </pre>
+	<a href="index.jsp"><button>홈 이동</button></a>
 	<table border="1">
 		<thead>
 			<td>사원번호</td>
@@ -33,7 +34,7 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="6"><a href="empInput.jsp">사원 추가</a></td>
+				<td colspan="6"><a href="EmpInputServlet">사원 추가</a></td>
 			</tr>
 		</tfoot>
 	</table>
