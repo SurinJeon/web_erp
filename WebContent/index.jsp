@@ -9,16 +9,15 @@
 <head>
 <meta charset="UTF-8">
 <title>데이터베이스 연동 테스트</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/index_style.css">
 </head>
 <body>
-	<fieldset>
-		<legend>ERP</legend>
+	<div class="menu">
 		<ul>
-			<li> <a href="TitleListServlet">직책 관리</a> </li>
-			<li> <a href="DeptListServlet">부서 관리 </a> </li>
-			<li> <a href="EmpListServlet">사원 관리 </a> </li>
+			<li><a href="TitleListServlet">직책 관리</a></li>
+			<li><a href="DeptListServlet">부서 관리 </a></li>
+			<li><a href="EmpListServlet">사원 관리 </a></li>
 		</ul>
-	</fieldset>
+	</div>
 </body>
 </html>

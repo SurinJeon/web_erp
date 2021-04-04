@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.menu{
+	width: 400px;
+	margin: auto;
+	text-align: center;
+}
+
+ul {
+	padding-left: 0px;
+	background-color: #bee5d3;
+	margin: auto;
+	list-style: none;
+}
+
+li {
+	margin: 20px 20px 20px 20px;
+	display: inline-block;
+	text-align: center;
+}
+
+li label {
+	width: 100px;
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: #3b5360;
+}
